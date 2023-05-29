@@ -1,0 +1,7 @@
+
+
+mvn clean package
+docker-compose up -d --build
+docker tag docker-to-aws-with-java:latest lucianodevapi/docker-to-aws-with-java:latest
+docker login docker.io
+docker push lucianodevapi/docker-to-aws-with-java
